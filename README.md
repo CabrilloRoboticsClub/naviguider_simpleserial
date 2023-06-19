@@ -64,4 +64,4 @@ This library is intended for use with the following devices from [PNI Sensor](ht
 
 ## API Documentation
 
-_TODO_
+API documentation can be found on [readthedocs](https://lib-naviguider-simpleserial-py.readthedocs.io/en/latest/).
