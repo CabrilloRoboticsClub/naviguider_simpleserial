@@ -4,33 +4,33 @@ from enum import Enum, auto
 class MetaEventType(Enum):
     """Enum class representing possible meta event types."""
 
-    CAL_STATUS_CHANGED = auto()
-    """Calibration status has changed."""
-    CALIBRATION_STABLE = auto()
-    """Calibration is stable."""
-    DYNAMIC_RANGE_CHANGED = auto()
-    """A sensor's dynamic range has changed."""
-    ERROR = auto()
-    """A general error has occurred."""
-    FIFO_OVERFLOW = auto()
-    """The event FIFO has overflowed."""
-    FIFO_WATERMARK = auto()
-    """The event FIFO is about to overflow."""
-    FLUSH_COMPLETE = auto()
+    FLUSH_COMPLETE = 1
     """The event FIFO has been flushed."""
-    INITIALIZED = auto()
-    """Device initialization has completed."""
-    MAGNETIC_TRANSIENT = auto()
-    """Magnetic transient has been detected."""
-    POWER_MODE_CHANGED = auto()
-    """A sensor's power mode has changed."""
-    SAMPLE_RATE_CHANGED = auto()
+    SAMPLE_RATE_CHANGED = 2
     """A sensor's sample rate has changed."""
-    SELF_TEST_RESULT = auto()
-    """Self-test result is available."""
-    SENSOR_ERROR = auto()
-    """A sensor error has occurred."""
-    STILLNESS_CHANGED = auto()
+    POWER_MODE_CHANGED = 3
+    """A sensor's power mode has changed."""
+    ERROR = 4
+    """A general error has occurred."""
+    MAGNETIC_TRANSIENT = 5
+    """Magnetic transient has been detected."""
+    CAL_STATUS_CHANGED = 6
+    """Calibration status has changed."""
+    STILLNESS_CHANGED = 7
     """Stillness has changed."""
-    TRANSFER_CAUSE = auto()
+    CALIBRATION_STABLE = 9
+    """Calibration is stable."""
+    SENSOR_ERROR = 11
+    """A sensor error has occurred."""
+    FIFO_OVERFLOW = 12
+    """The event FIFO has overflowed."""
+    DYNAMIC_RANGE_CHANGED = 13
+    """A sensor's dynamic range has changed."""
+    FIFO_WATERMARK = 14
+    """The event FIFO is about to overflow."""
+    SELF_TEST_RESULT = 15
+    """Self-test result is available."""
+    INITIALIZED = 16
+    """Device initialization has completed."""
+    TRANSFER_CAUSE = 17
     """A sensor hardware bus error has occurred."""

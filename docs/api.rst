@@ -32,18 +32,24 @@ Types
 -----
 .. automodule:: naviguider_simpleserial.application_mode
     :members:
+    :member-order: bysource
 
 .. automodule:: naviguider_simpleserial.coordinate_system
     :members:
+    :member-order: bysource
 
 .. automodule:: naviguider_simpleserial.meta_event_type
     :members:
+    :member-order: bysource
 
 .. automodule:: naviguider_simpleserial.mounting_option
     :members:
+    :member-order: bysource
 
 .. automodule:: naviguider_simpleserial.sensor_type
     :members:
+    :member-order: bysource
 
 .. automodule:: naviguider_simpleserial.test_result
     :members:
+    :member-order: bysource

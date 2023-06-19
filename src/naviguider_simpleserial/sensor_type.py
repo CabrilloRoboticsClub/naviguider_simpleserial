@@ -4,31 +4,31 @@ from enum import Enum, auto
 class SensorType(Enum):
     """Enum class representing possible sensor types."""
 
-    ACCELEROMETER = auto()
+    ACCELEROMETER = 1
     """Accelerometer sensor."""
-    GAME_ROTATION_VECTOR = auto()
-    """Game rotation vector sensor."""
-    GEOMAG_ROTATION_VECTOR = auto()
-    """Geo-magnetic rotation vector sensor."""
-    GRAVITY = auto()
-    """Gravity sensor."""
-    GYROSCOPE = auto()
-    """Gyroscope sensor."""
-    GYROSCOPE_UNCALIBRATED = auto()
-    """Uncalibrated gyroscope sensor."""
-    LINEAR_ACCELERATION = auto()
-    """Linear acceleration sensor."""
-    MAGNETOMETER = auto()
+    MAGNETOMETER = 2
     """Magnetometer sensor."""
-    MAGNETOMETER_UNCALIBRATED = auto()
-    """Uncalibrated magnetometer sensor."""
-    ORIENTATION = auto()
+    ORIENTATION = 3
     """Orientation sensor."""
-    PRESSURE = auto()
+    GYROSCOPE = 4
+    """Gyroscope sensor."""
+    PRESSURE = 6
     """Pressure sensor."""
-    ROTATION_VECTOR = auto()
-    """Rotation vector sensor."""
-    SIGNIFICANT_MOTION = auto()
-    """Significant motion sensor."""
-    TEMPERATURE = auto()
+    TEMPERATURE = 7
     """Temperature sensor."""
+    GRAVITY = 9
+    """Gravity sensor."""
+    LINEAR_ACCELERATION = 10
+    """Linear acceleration sensor."""
+    ROTATION_VECTOR = 11
+    """Rotation vector sensor."""
+    MAGNETOMETER_UNCALIBRATED = 14
+    """Uncalibrated magnetometer sensor."""
+    GAME_ROTATION_VECTOR = 15
+    """Game rotation vector sensor."""
+    GYROSCOPE_UNCALIBRATED = 16
+    """Uncalibrated gyroscope sensor."""
+    SIGNIFICANT_MOTION = 17
+    """Significant motion sensor."""
+    GEOMAG_ROTATION_VECTOR = 20
+    """Geo-magnetic rotation vector sensor."""

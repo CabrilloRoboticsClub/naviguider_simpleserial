@@ -11,33 +11,6 @@ from .sensor_type import SensorType
 from .test_result import TestResult
 from .wakeup_event import WakeupEvent
 
-_MOUNTING_OPTION_MAP = {
-    MountingOption.STD_000: 1,
-    MountingOption.STD_090: 4,
-    MountingOption.STD_180: 5,
-    MountingOption.STD_270: 6,
-    MountingOption.X_UP_000: 2,
-    MountingOption.X_UP_090: 8,
-    MountingOption.X_UP_180: 9,
-    MountingOption.X_UP_270: 10,
-    MountingOption.Y_UP_000: 3,
-    MountingOption.Y_UP_090: 11,
-    MountingOption.Y_UP_180: 12,
-    MountingOption.Y_UP_270: 13,
-    MountingOption.Z_DOWN_000: 7,
-    MountingOption.Z_DOWN_090: 14,
-    MountingOption.Z_DOWN_180: 15,
-    MountingOption.Z_DOWN_270: 16,
-}
-
-_APPLICATION_MODE_MAP = {
-    ApplicationMode.DRONE: 1,
-    ApplicationMode.SLOW_TARGETING: 2,
-    ApplicationMode.TARGETING: 3,
-    ApplicationMode.RIFLE: 4,
-    ApplicationMode.GAMING: 5,
-}
-
 
 def encode_system_restart() -> str:
     """
@@ -65,9 +38,7 @@ def encode_set_mounting_option(mounting_option: MountingOption) -> str:
 
     :returns: The encoded command string.
     """
-    return (
-        f"M{_MOUNTING_OPTION_MAP.get(mounting_option, MountingOption.STD_000.value)}\n"
-    )
+    return f"M{mounting_option.value}\n"
 
 
 def encode_set_coordinate_system(coordinate_system: CoordinateSystem) -> str:
@@ -325,7 +296,7 @@ def encode_set_application_mode(application_mode: ApplicationMode) -> str:
 
     :returns: The encoded command string.
     """
-    return f"A{_APPLICATION_MODE_MAP.get(application_mode, ApplicationMode.TARGETING.value)}\n"
+    return f"A{application_mode.value}\n"
 
 
 def encode_set_custom_application_mode(
