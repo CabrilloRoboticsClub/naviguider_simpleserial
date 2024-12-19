@@ -1,12 +1,13 @@
 from .event import Event
+from dataclasses import dataclass
 
-
+@dataclass
 class SensorEvent(Event):
     """Base class for sensor events."""
 
     pass
 
-
+@dataclass
 class AccelerometerSensorEvent(SensorEvent):
     """Event reported when accelerometer sensor data is available."""
 
@@ -18,7 +19,7 @@ class AccelerometerSensorEvent(SensorEvent):
     """Acceleration force along the z axis (including gravity). in m/s²."""
     accuracy: float
 
-
+@dataclass
 class GameRotationVectorSensorEvent(SensorEvent):
     """Event reported when game rotation vector sensor data is available."""
 
@@ -32,7 +33,7 @@ class GameRotationVectorSensorEvent(SensorEvent):
     """Scalar component of the rotation vector ((cos(θ/2))."""
     accuracy: float
 
-
+@dataclass
 class GeomagRotationVectorSensorEvent(SensorEvent):
     """Event reported when geo-magnetic rotation vector sensor data is available."""
 
@@ -45,7 +46,7 @@ class GeomagRotationVectorSensorEvent(SensorEvent):
     qw: float
     """Scalar component of the rotation vector ((cos(θ/2))."""
 
-
+@dataclass
 class GravitySensorEvent(SensorEvent):
     """Event reported when gravity sensor data is available."""
 
@@ -57,7 +58,7 @@ class GravitySensorEvent(SensorEvent):
     """Force of gravity along the z axis in m/s²."""
     accuracy: float
 
-
+@dataclass
 class GyroscopeUncalibratedSensorEvent(SensorEvent):
     """Event reported when uncalibrated gyroscope sensor data is available."""
 
@@ -75,7 +76,7 @@ class GyroscopeUncalibratedSensorEvent(SensorEvent):
     """Estimated drift around the z axis in rad/s"""
     accuracy: float
 
-
+@dataclass
 class GyroscopeSensorEvent(SensorEvent):
     """Event reported when uncalibrated gyroscope sensor data is available."""
 
@@ -87,7 +88,7 @@ class GyroscopeSensorEvent(SensorEvent):
     """Rate of rotation around the z axis in rad/s"""
     accuracy: float
 
-
+@dataclass
 class LinearAccelerationSensorEvent(SensorEvent):
     """Event reported when linear acceleration sensor data is available."""
 
@@ -99,7 +100,7 @@ class LinearAccelerationSensorEvent(SensorEvent):
     """Acceleration force along the z axis (excluding gravity) in m/s²."""
     accuracy: float
 
-
+@dataclass
 class MagnetometerUncalibratedSensorEvent(SensorEvent):
     x: float
     """Geomagnetic field strength (without hard iron calibration) along the x axis in micro-Tesla (µT)."""
@@ -115,7 +116,7 @@ class MagnetometerUncalibratedSensorEvent(SensorEvent):
     """Iron bias estimation along the z axis in micro-Tesla (µT)."""
     accuracy: float
 
-
+@dataclass
 class MagnetometerSensorEvent(SensorEvent):
     """Event reported when magnetometer data is available."""
 
@@ -127,7 +128,7 @@ class MagnetometerSensorEvent(SensorEvent):
     """Geomagnetic field strength along the z axis in micro-Tesla (µT)."""
     accuracy: float
 
-
+@dataclass
 class OrientationSensorEvent(SensorEvent):
     """Event reported when orientation sensor data is available."""
 
@@ -140,14 +141,14 @@ class OrientationSensorEvent(SensorEvent):
     accuracy: float
     """Accuracy value"""
 
-
+@dataclass
 class PressureSensorEvent(SensorEvent):
     """Event reported when pressure sensor data is available."""
 
     hpa: float
     """Ambient air pressure in hPa."""
 
-
+@dataclass
 class RotationVectorSensorEvent(SensorEvent):
     """Event reported when rotation vector sensor data is available."""
 
@@ -161,7 +162,7 @@ class RotationVectorSensorEvent(SensorEvent):
     """Scalar component of the rotation vector ((cos(θ/2))."""
     accuracy: float
 
-
+@dataclass
 class TemperatureSensorEvent(SensorEvent):
     """Event reported when temperature sensor data is available."""
 
